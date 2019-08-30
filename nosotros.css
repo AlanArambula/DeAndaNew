@@ -29,7 +29,10 @@ html, body {
     position: absolute;
     width: 100%;
     height: 50vh;
-    background: #636366;
+    background: #305572;
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 3s;
 }
 
 .bottom {
@@ -38,6 +41,10 @@ html, body {
     height: 50vh;
     width: 100%;
     background: url(img/deanda.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 4.2s;
 }
 
 @media (max-width: 768px) {
@@ -91,6 +98,32 @@ html, body {
     color: #fff;
 }
 
+.media {
+    position: absolute;
+    bottom: 1%;
+    right: 8%;
+}
+
+.media p {
+    color: #fff;
+}
+
+.media a {
+    color: #fff;
+    padding-left: 1rem
+}
+
+.media ul {
+    list-style: none;
+}
+
+.media ul li {
+    display: inline-block;
+    color: #fff;
+}
+
+/* RIGHT SIDE */
+
 .cover {
     position: absolute;
     top: 50%;
@@ -100,6 +133,10 @@ html, body {
     height: 50%;
     background: url(img/ing.jpg) no-repeat 50% 50%;
     background-size: cover;
+    opacity: 0;
+    animation: appear-text 0.0001s linear forwards;
+    animation-delay: 2.6s;
+
 }
 
 .data {
@@ -115,6 +152,7 @@ html, body {
 #name {
     font-size: 1rem;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 #text {
@@ -123,18 +161,117 @@ html, body {
 
 .about {
     position: absolute;
-    top: 84%;
-    left: 44%;
-    transform: translate(-50%, -50%);
+    margin: 6rem 4rem;
 }
 
 .about h2 {
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.2);
     text-transform: uppercase;
+    margin-bottom: 0
 }
 
 .about p {
     color: #fff;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.4px;
+    margin: 1rem 2rem;
+    font-weight: 300;
+    
+}
+
+.data2 {
+    position: absolute;
+    bottom: 1%;
+    right: 4%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.block-cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+}
+
+.block-cover::after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: #000;
+    animation: rev-block 2.5s cubic-bezier(0.2, 1, 0.2, 1) forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes rev-block {
+
+    0% {
+         left: 0;
+         width: 0%;
+    }
+    50% {
+         left: 0;
+         width: 100%;
+    }
+    100% {
+         left: 100%;
+         width: 0%;
+    }
+
+}
+
+@keyframes appear-text {
+
+    0% {
+         opacity: 0;
+    }
+    100% {
+         opacity: 1;
+    }
+
+}
+
+.upper-block {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+}
+
+.upper-block::after {
+   content: '';
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 0%;
+   height: 100%;
+   background: #000;
+   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+   animation-delay: 2.4s;
+}
+
+.block-bottom {
+    position: absolute;
+    top: 50%;
+    height: 50vh;
+    width: 100%;
+}
+
+.block-bottom::after {
+   content: '';
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 0%;
+   height: 100%;
+   background: #636363;
+   animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+   animation-delay: 3.6s;
 }
