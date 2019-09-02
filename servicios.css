@@ -1,0 +1,177 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.left, .right {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+}
+
+.left {
+    background: #fff;
+}
+
+.right {
+    left: 50%;
+    background: #305572;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    position: fixed;
+    top: 4%;
+    left: 4%;
+    z-index: 1;
+}
+
+.nav-menu {
+    line-height: 1rem;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 6%;
+}
+
+.nav-menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 3rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.nav-menu a {
+    color: #fff;
+}
+
+.right-sidebar {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.right-sidebar ul {
+    list-style: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 4px; 
+}
+
+.services {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-bottom: 2rem;
+}
+
+.right-sidebar li:not(:first-child) {
+    padding: 4px 0;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.product img {
+    width: 50%;
+}
+
+.product {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    transform: traslate(-50%, -50%);
+    animation: fly 4s ease-in-out infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-10%, -10%);
+    }
+
+    50% {
+        transform: translate(-10%, -15%);
+    }
+
+    100% {
+        transform: translate(-10%, -10%);
+    }
+}
+
+.left-bottom {
+    position: absolute;
+    color: #636363;
+    bottom: 2%;
+    left: 4%;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.left-sidebar {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 26%;
+}
+
+.left-sidebar h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #636363;
+    text-transform: uppercase;
+    margin-bottom: 0
+}
+
+.desc {
+    color: #636363;
+    font-size: 0.8rem;
+    letter-spacing: 1.4px;
+    margin: 1rem 2rem;
+    font-weight: 300;  
+}
+
+.media {
+    position: absolute;
+    bottom: 1%;
+    right: 4%;
+}
+
+.media p {
+    color: #fff;
+}
+
+.media a {
+    color: #fff;
+    padding-left: 1rem
+}
+
+.media ul {
+    list-style: none;
+}
+
+.media ul li {
+    display: inline-block;
+    color: #fff;
+}
+
