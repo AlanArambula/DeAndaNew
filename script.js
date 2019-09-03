@@ -63,32 +63,32 @@ TweenMax.staggerFrom(".row p", 1, {
 }, 0.3)
 
 TweenMax.from(".header h1", 2, {
+    delay: 3,
+    opacity: 0,
+    y: 20,
+    ease: Expo.easeInOut
+})
+
+TweenMax.from(".header h2", 2, {
     delay: 3.2,
     opacity: 0,
     y: 20,
     ease: Expo.easeInOut
 })
 
-TweenMax.from(".header h2", 3, {
-    delay: 3.2,
+TweenMax.from(".header p", 2, {
+    delay: 3.4,
     opacity: 0,
     y: 20,
     ease: Expo.easeInOut
 })
 
-TweenMax.from(".header p", 4, {
-    delay: 3.2,
+TweenMax.staggerFrom(".wrapper_form", 2, {
+    delay: 3.6,
     opacity: 0,
     y: 20,
     ease: Expo.easeInOut
-})
-
-TweenMax.from(".header button", 5, {
-    delay: 3.2,
-    opacity: 0,
-    y: 20,
-    ease: Expo.easeInOut
-})
+}, 0.2)
 
 
 
